@@ -1,5 +1,4 @@
 package ar.edu.utn.frc.tup.lciii.controllers;
-import ar.edu.utn.frc.tup.lciii.dtos.common.CountryAmountDTO;
 import ar.edu.utn.frc.tup.lciii.dtos.common.CountryDTO;
 import ar.edu.utn.frc.tup.lciii.service.CountryService;
 import lombok.RequiredArgsConstructor;
@@ -45,10 +44,6 @@ public class CountryController {
         return ResponseEntity.ok(country);
     }
 
-    @PostMapping("/save-random-countries")
-    public ResponseEntity<List<CountryDTO>> saveRandomCountries(@RequestBody CountryAmountDTO amountDTO) {
-        List<CountryDTO> countries = countryService.saveRandomCountries(amountDTO);
-        return ResponseEntity.ok(countries);
-    }
+    @PostMapping("/")
 
 }
